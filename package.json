@@ -1,0 +1,53 @@
+{
+  "name": "demeteorizer",
+  "description": "Converts a Meteor app into a \"standard\" Node.js application.",
+  "keywords": [
+    "meteor"
+  ],
+  "version": "4.3.0",
+  "author": "Modulus <admin@modulus.io>",
+  "maintainers": [
+    "Francesca Varney <fran@modulus.io>",
+    "Matt Hernandez <matt@modulus.io>"
+  ],
+  "contributors": [
+    "Brandon Cannaday <brandon@modulus.io>",
+    "Bret Fisher <me@bfish.us>",
+    "Matt Hernandez <matt@modulus.io>",
+    "Tarang Patel <t@ran.gg>",
+    "Vincil Bishop <vincil.bishop@Vbishop.com>"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OnModulus/demeteorizer"
+  },
+  "dependencies": {
+    "commander": "2.9.0",
+    "cross-spawn": "5.1.0",
+    "fs-extra": "2.0.0",
+    "hoek": "4.x.x",
+    "semver": "5.1.0"
+  },
+  "devDependencies": {
+    "code": "4.0.0",
+    "lab": "12.1.0",
+    "proxyquire": "1.7.11",
+    "sinon": "1.17.7",
+    "standard": "9.0.0"
+  },
+  "scripts": {
+    "pretest": "standard",
+    "test": "lab --threshold 100",
+    "gen-coverage": "lab --coverage --reporter lcov --output coverage/lcov.info"
+  },
+  "main": "./lib/demeteorizer",
+  "bin": {
+    "demeteorizer": "./bin/demeteorizer"
+  },
+  "preferGlobal": true,
+  "engines": {
+    "node": ">=4",
+    "npm": ">=3.10.8"
+  }
+}
